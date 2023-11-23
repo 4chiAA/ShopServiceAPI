@@ -15,8 +15,8 @@ public class ShopService {
     private final ProductRepo productRepo;
     private final OrderRepo orderRepo;
 
-    public Product addProduct(Product product){
-        return productRepo.save(product);
+    public List<Product> addProduct(List<Product> product){
+        return productRepo.saveAll(product);
     }
 
     public void removeProduct(String id){
